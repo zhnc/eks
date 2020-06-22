@@ -1,876 +1,5 @@
 {
   "Resources": {
-    "VPCB9E5F0B4": {
-      "Type": "AWS::EC2::VPC",
-      "Properties": {
-        "CidrBlock": "10.10.0.0/16",
-        "EnableDnsHostnames": true,
-        "EnableDnsSupport": true,
-        "InstanceTenancy": "default",
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/Resource"
-      }
-    },
-    "VPCPublicSubnetSubnet1SubnetB36A48AC": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.10.0.0/24",
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "AvailabilityZone": "us-west-2a",
-        "MapPublicIpOnLaunch": true,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "PublicSubnet"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Public"
-          },
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet1/Subnet"
-      }
-    },
-    "VPCPublicSubnetSubnet1RouteTable742C0EB0": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet1/RouteTable"
-      }
-    },
-    "VPCPublicSubnetSubnet1RouteTableAssociationC74A5497": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPublicSubnetSubnet1RouteTable742C0EB0"
-        },
-        "SubnetId": {
-          "Ref": "VPCPublicSubnetSubnet1SubnetB36A48AC"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet1/RouteTableAssociation"
-      }
-    },
-    "VPCPublicSubnetSubnet1DefaultRouteE511FA83": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPublicSubnetSubnet1RouteTable742C0EB0"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "GatewayId": {
-          "Ref": "VPCIGWB7E252D3"
-        }
-      },
-      "DependsOn": [
-        "VPCVPCGW99B986DC"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet1/DefaultRoute"
-      }
-    },
-    "VPCPublicSubnetSubnet1EIPF8265397": {
-      "Type": "AWS::EC2::EIP",
-      "Properties": {
-        "Domain": "vpc",
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet1/EIP"
-      }
-    },
-    "VPCPublicSubnetSubnet1NATGateway5BB92226": {
-      "Type": "AWS::EC2::NatGateway",
-      "Properties": {
-        "AllocationId": {
-          "Fn::GetAtt": [
-            "VPCPublicSubnetSubnet1EIPF8265397",
-            "AllocationId"
-          ]
-        },
-        "SubnetId": {
-          "Ref": "VPCPublicSubnetSubnet1SubnetB36A48AC"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet1/NATGateway"
-      }
-    },
-    "VPCPublicSubnetSubnet2Subnet57DB39EA": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.10.1.0/24",
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "AvailabilityZone": "us-west-2b",
-        "MapPublicIpOnLaunch": true,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "PublicSubnet"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Public"
-          },
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet2/Subnet"
-      }
-    },
-    "VPCPublicSubnetSubnet2RouteTable3179FB70": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet2/RouteTable"
-      }
-    },
-    "VPCPublicSubnetSubnet2RouteTableAssociation3963E24F": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPublicSubnetSubnet2RouteTable3179FB70"
-        },
-        "SubnetId": {
-          "Ref": "VPCPublicSubnetSubnet2Subnet57DB39EA"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet2/RouteTableAssociation"
-      }
-    },
-    "VPCPublicSubnetSubnet2DefaultRouteEF67F533": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPublicSubnetSubnet2RouteTable3179FB70"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "GatewayId": {
-          "Ref": "VPCIGWB7E252D3"
-        }
-      },
-      "DependsOn": [
-        "VPCVPCGW99B986DC"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet2/DefaultRoute"
-      }
-    },
-    "VPCPublicSubnetSubnet2EIPEE03E955": {
-      "Type": "AWS::EC2::EIP",
-      "Properties": {
-        "Domain": "vpc",
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet2/EIP"
-      }
-    },
-    "VPCPublicSubnetSubnet2NATGateway9510C167": {
-      "Type": "AWS::EC2::NatGateway",
-      "Properties": {
-        "AllocationId": {
-          "Fn::GetAtt": [
-            "VPCPublicSubnetSubnet2EIPEE03E955",
-            "AllocationId"
-          ]
-        },
-        "SubnetId": {
-          "Ref": "VPCPublicSubnetSubnet2Subnet57DB39EA"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet2/NATGateway"
-      }
-    },
-    "VPCPublicSubnetSubnet3SubnetAB6FC4C0": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.10.2.0/24",
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "AvailabilityZone": "us-west-2c",
-        "MapPublicIpOnLaunch": true,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "PublicSubnet"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Public"
-          },
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet3"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet3/Subnet"
-      }
-    },
-    "VPCPublicSubnetSubnet3RouteTable2CFAAD37": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PublicSubnetSubnet3"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet3/RouteTable"
-      }
-    },
-    "VPCPublicSubnetSubnet3RouteTableAssociation4218F0AA": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPublicSubnetSubnet3RouteTable2CFAAD37"
-        },
-        "SubnetId": {
-          "Ref": "VPCPublicSubnetSubnet3SubnetAB6FC4C0"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet3/RouteTableAssociation"
-      }
-    },
-    "VPCPublicSubnetSubnet3DefaultRouteED8A1E4D": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPublicSubnetSubnet3RouteTable2CFAAD37"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "GatewayId": {
-          "Ref": "VPCIGWB7E252D3"
-        }
-      },
-      "DependsOn": [
-        "VPCVPCGW99B986DC"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PublicSubnetSubnet3/DefaultRoute"
-      }
-    },
-    "VPCPrivateSubnetSubnet1Subnet69449E4E": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.10.3.0/24",
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "AvailabilityZone": "us-west-2a",
-        "MapPublicIpOnLaunch": false,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "PrivateSubnet"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Private"
-          },
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/internal-elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PrivateSubnetSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet1/Subnet"
-      }
-    },
-    "VPCPrivateSubnetSubnet1RouteTable0611BCC8": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/internal-elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PrivateSubnetSubnet1"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet1/RouteTable"
-      }
-    },
-    "VPCPrivateSubnetSubnet1RouteTableAssociation5EA7C6A8": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPrivateSubnetSubnet1RouteTable0611BCC8"
-        },
-        "SubnetId": {
-          "Ref": "VPCPrivateSubnetSubnet1Subnet69449E4E"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet1/RouteTableAssociation"
-      }
-    },
-    "VPCPrivateSubnetSubnet1DefaultRoute704189A1": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPrivateSubnetSubnet1RouteTable0611BCC8"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "NatGatewayId": {
-          "Ref": "VPCPublicSubnetSubnet1NATGateway5BB92226"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet1/DefaultRoute"
-      }
-    },
-    "VPCPrivateSubnetSubnet2SubnetA72DC906": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.10.4.0/24",
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "AvailabilityZone": "us-west-2b",
-        "MapPublicIpOnLaunch": false,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "PrivateSubnet"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Private"
-          },
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/internal-elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PrivateSubnetSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet2/Subnet"
-      }
-    },
-    "VPCPrivateSubnetSubnet2RouteTableDC3C7C6A": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/internal-elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PrivateSubnetSubnet2"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet2/RouteTable"
-      }
-    },
-    "VPCPrivateSubnetSubnet2RouteTableAssociation62C95AF2": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPrivateSubnetSubnet2RouteTableDC3C7C6A"
-        },
-        "SubnetId": {
-          "Ref": "VPCPrivateSubnetSubnet2SubnetA72DC906"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet2/RouteTableAssociation"
-      }
-    },
-    "VPCPrivateSubnetSubnet2DefaultRoute530F31EB": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPrivateSubnetSubnet2RouteTableDC3C7C6A"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "NatGatewayId": {
-          "Ref": "VPCPublicSubnetSubnet2NATGateway9510C167"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet2/DefaultRoute"
-      }
-    },
-    "VPCPrivateSubnetSubnet3SubnetEEA8D73E": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "10.10.5.0/24",
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "AvailabilityZone": "us-west-2c",
-        "MapPublicIpOnLaunch": false,
-        "Tags": [
-          {
-            "Key": "aws-cdk:subnet-name",
-            "Value": "PrivateSubnet"
-          },
-          {
-            "Key": "aws-cdk:subnet-type",
-            "Value": "Private"
-          },
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/internal-elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PrivateSubnetSubnet3"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet3/Subnet"
-      }
-    },
-    "VPCPrivateSubnetSubnet3RouteTable91C5682C": {
-      "Type": "AWS::EC2::RouteTable",
-      "Properties": {
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "kubernetes.io/role/internal-elb",
-            "Value": "1"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC/PrivateSubnetSubnet3"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet3/RouteTable"
-      }
-    },
-    "VPCPrivateSubnetSubnet3RouteTableAssociation23CC5EA8": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPrivateSubnetSubnet3RouteTable91C5682C"
-        },
-        "SubnetId": {
-          "Ref": "VPCPrivateSubnetSubnet3SubnetEEA8D73E"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet3/RouteTableAssociation"
-      }
-    },
-    "VPCPrivateSubnetSubnet3DefaultRoute8977A4AF": {
-      "Type": "AWS::EC2::Route",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "VPCPrivateSubnetSubnet3RouteTable91C5682C"
-        },
-        "DestinationCidrBlock": "0.0.0.0/0",
-        "NatGatewayId": {
-          "Ref": "VPCPublicSubnetSubnet1NATGateway5BB92226"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/PrivateSubnetSubnet3/DefaultRoute"
-      }
-    },
-    "VPCIGWB7E252D3": {
-      "Type": "AWS::EC2::InternetGateway",
-      "Properties": {
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/IGW"
-      }
-    },
-    "VPCVPCGW99B986DC": {
-      "Type": "AWS::EC2::VPCGatewayAttachment",
-      "Properties": {
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "InternetGatewayId": {
-          "Ref": "VPCIGWB7E252D3"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/VPCGW"
-      }
-    },
-    "VPCS3CC6C5EE4": {
-      "Type": "AWS::EC2::VPCEndpoint",
-      "Properties": {
-        "ServiceName": {
-          "Fn::Join": [
-            "",
-            [
-              "com.amazonaws.",
-              {
-                "Ref": "AWS::Region"
-              },
-              ".s3"
-            ]
-          ]
-        },
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "RouteTableIds": [
-          {
-            "Ref": "VPCPrivateSubnetSubnet1RouteTable0611BCC8"
-          },
-          {
-            "Ref": "VPCPrivateSubnetSubnet2RouteTableDC3C7C6A"
-          },
-          {
-            "Ref": "VPCPrivateSubnetSubnet3RouteTable91C5682C"
-          },
-          {
-            "Ref": "VPCPublicSubnetSubnet1RouteTable742C0EB0"
-          },
-          {
-            "Ref": "VPCPublicSubnetSubnet2RouteTable3179FB70"
-          },
-          {
-            "Ref": "VPCPublicSubnetSubnet3RouteTable2CFAAD37"
-          }
-        ],
-        "VpcEndpointType": "Gateway"
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/S3/Resource"
-      }
-    },
-    "VPCFlowLogS3Bucket454C2C06": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "kubernetes.io/cluster/eks_demo",
-            "Value": "shared"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks/VPC"
-          }
-        ]
-      },
-      "UpdateReplacePolicy": "Retain",
-      "DeletionPolicy": "Retain",
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/FlowLogS3/Bucket/Resource"
-      }
-    },
-    "VPCFlowLogS3FlowLog14B02CD7": {
-      "Type": "AWS::EC2::FlowLog",
-      "Properties": {
-        "ResourceId": {
-          "Ref": "VPCB9E5F0B4"
-        },
-        "ResourceType": "VPC",
-        "TrafficType": "REJECT",
-        "LogDestination": {
-          "Fn::GetAtt": [
-            "VPCFlowLogS3Bucket454C2C06",
-            "Arn"
-          ]
-        },
-        "LogDestinationType": "s3"
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/VPC/FlowLogS3/FlowLog"
-      }
-    },
     "AdminRole38563C57": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -966,7 +95,7 @@
           }
         ],
         "VpcId": {
-          "Ref": "VPCB9E5F0B4"
+          "Fn::ImportValue": "vpc:ExportsOutputRefVPCB9E5F0B4BD23A326"
         }
       },
       "Metadata": {
@@ -997,11 +126,11 @@
         "aws:cdk:path": "eks/eks_demo/ControlPlaneSecurityGroup/from ekseksdemonodegroupInstanceSecurityGroup87500402:443"
       }
     },
-    "eksdemoControlPlaneSecurityGroupfromekseksdemonodegroupspotInstanceSecurityGroupE6C13CA9443FB3CAE76": {
+    "eksdemoControlPlaneSecurityGroupfromekseksdemospotInstanceSecurityGroupF0118E6344365BE0C2E": {
       "Type": "AWS::EC2::SecurityGroupIngress",
       "Properties": {
         "IpProtocol": "tcp",
-        "Description": "from ekseksdemonodegroupspotInstanceSecurityGroupE6C13CA9:443",
+        "Description": "from ekseksdemospotInstanceSecurityGroupF0118E63:443",
         "FromPort": 443,
         "GroupId": {
           "Fn::GetAtt": [
@@ -1011,14 +140,14 @@
         },
         "SourceSecurityGroupId": {
           "Fn::GetAtt": [
-            "eksdemonodegroupspotInstanceSecurityGroupB2CE2602",
+            "eksdemospotInstanceSecurityGroupA5554830",
             "GroupId"
           ]
         },
         "ToPort": 443
       },
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/ControlPlaneSecurityGroup/from ekseksdemonodegroupspotInstanceSecurityGroupE6C13CA9:443"
+        "aws:cdk:path": "eks/eks_demo/ControlPlaneSecurityGroup/from ekseksdemospotInstanceSecurityGroupF0118E63:443"
       }
     },
     "eksdemoCreationRole26CBA2F7": {
@@ -1206,13 +335,13 @@
             ],
             "subnetIds": [
               {
-                "Ref": "VPCPublicSubnetSubnet1SubnetB36A48AC"
+                "Fn::ImportValue": "vpc:ExportsOutputRefVPCPublicSubnetSubnet1SubnetB36A48ACBF80D428"
               },
               {
-                "Ref": "VPCPublicSubnetSubnet2Subnet57DB39EA"
+                "Fn::ImportValue": "vpc:ExportsOutputRefVPCPublicSubnetSubnet2Subnet57DB39EA545C68B3"
               },
               {
-                "Ref": "VPCPublicSubnetSubnet3SubnetAB6FC4C0"
+                "Fn::ImportValue": "vpc:ExportsOutputRefVPCPublicSubnetSubnet3SubnetAB6FC4C06D11E753"
               }
             ]
           }
@@ -1272,7 +401,7 @@
               "\\\",\\\"username\\\":\\\"system:node:{{EC2PrivateDNSName}}\\\",\\\"groups\\\":[\\\"system:bootstrappers\\\",\\\"system:nodes\\\"]},{\\\"rolearn\\\":\\\"",
               {
                 "Fn::GetAtt": [
-                  "eksdemonodegroupspotInstanceRole24B4EC22",
+                  "eksdemospotInstanceRoleC49F8A72",
                   "Arn"
                 ]
               },
@@ -1374,13 +503,13 @@
         },
         "Subnets": [
           {
-            "Ref": "VPCPrivateSubnetSubnet1Subnet69449E4E"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet1Subnet69449E4E31D58FCF"
           },
           {
-            "Ref": "VPCPrivateSubnetSubnet2SubnetA72DC906"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet2SubnetA72DC9065AAC46C9"
           },
           {
-            "Ref": "VPCPrivateSubnetSubnet3SubnetEEA8D73E"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet3SubnetEEA8D73E0EFF0D69"
           }
         ],
         "ForceUpdateEnabled": true,
@@ -1436,7 +565,7 @@
           }
         ],
         "VpcId": {
-          "Ref": "VPCB9E5F0B4"
+          "Fn::ImportValue": "vpc:ExportsOutputRefVPCB9E5F0B4BD23A326"
         }
       },
       "Metadata": {
@@ -1687,13 +816,13 @@
         ],
         "VPCZoneIdentifier": [
           {
-            "Ref": "VPCPrivateSubnetSubnet1Subnet69449E4E"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet1Subnet69449E4E31D58FCF"
           },
           {
-            "Ref": "VPCPrivateSubnetSubnet2SubnetA72DC906"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet2SubnetA72DC9065AAC46C9"
           },
           {
-            "Ref": "VPCPrivateSubnetSubnet3SubnetEEA8D73E"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet3SubnetEEA8D73E0EFF0D69"
           }
         ]
       },
@@ -1717,10 +846,10 @@
         "aws:cdk:path": "eks/eks_demo/node_group/ASG"
       }
     },
-    "eksdemonodegroupspotInstanceSecurityGroupB2CE2602": {
+    "eksdemospotInstanceSecurityGroupA5554830": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "GroupDescription": "eks/eks_demo/node_group_spot/InstanceSecurityGroup",
+        "GroupDescription": "eks/eks_demo/spot/InstanceSecurityGroup",
         "SecurityGroupEgress": [
           {
             "CidrIp": "0.0.0.0/0",
@@ -1749,40 +878,40 @@
           },
           {
             "Key": "Name",
-            "Value": "eks/eks_demo/node_group_spot"
+            "Value": "eks/eks_demo/spot"
           }
         ],
         "VpcId": {
-          "Ref": "VPCB9E5F0B4"
+          "Fn::ImportValue": "vpc:ExportsOutputRefVPCB9E5F0B4BD23A326"
         }
       },
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/node_group_spot/InstanceSecurityGroup/Resource"
+        "aws:cdk:path": "eks/eks_demo/spot/InstanceSecurityGroup/Resource"
       }
     },
-    "eksdemonodegroupspotInstanceSecurityGroupfromekseksdemonodegroupspotInstanceSecurityGroupE6C13CA9ALLTRAFFICD7CCFE52": {
+    "eksdemospotInstanceSecurityGroupfromekseksdemospotInstanceSecurityGroupF0118E63ALLTRAFFIC0A07101E": {
       "Type": "AWS::EC2::SecurityGroupIngress",
       "Properties": {
         "IpProtocol": "-1",
-        "Description": "from ekseksdemonodegroupspotInstanceSecurityGroupE6C13CA9:ALL TRAFFIC",
+        "Description": "from ekseksdemospotInstanceSecurityGroupF0118E63:ALL TRAFFIC",
         "GroupId": {
           "Fn::GetAtt": [
-            "eksdemonodegroupspotInstanceSecurityGroupB2CE2602",
+            "eksdemospotInstanceSecurityGroupA5554830",
             "GroupId"
           ]
         },
         "SourceSecurityGroupId": {
           "Fn::GetAtt": [
-            "eksdemonodegroupspotInstanceSecurityGroupB2CE2602",
+            "eksdemospotInstanceSecurityGroupA5554830",
             "GroupId"
           ]
         }
       },
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/node_group_spot/InstanceSecurityGroup/from ekseksdemonodegroupspotInstanceSecurityGroupE6C13CA9:ALL TRAFFIC"
+        "aws:cdk:path": "eks/eks_demo/spot/InstanceSecurityGroup/from ekseksdemospotInstanceSecurityGroupF0118E63:ALL TRAFFIC"
       }
     },
-    "eksdemonodegroupspotInstanceSecurityGroupfromekseksdemoControlPlaneSecurityGroup905CAF36443BF004F7F": {
+    "eksdemospotInstanceSecurityGroupfromekseksdemoControlPlaneSecurityGroup905CAF364432438A004": {
       "Type": "AWS::EC2::SecurityGroupIngress",
       "Properties": {
         "IpProtocol": "tcp",
@@ -1790,7 +919,7 @@
         "FromPort": 443,
         "GroupId": {
           "Fn::GetAtt": [
-            "eksdemonodegroupspotInstanceSecurityGroupB2CE2602",
+            "eksdemospotInstanceSecurityGroupA5554830",
             "GroupId"
           ]
         },
@@ -1803,10 +932,10 @@
         "ToPort": 443
       },
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/node_group_spot/InstanceSecurityGroup/from ekseksdemoControlPlaneSecurityGroup905CAF36:443"
+        "aws:cdk:path": "eks/eks_demo/spot/InstanceSecurityGroup/from ekseksdemoControlPlaneSecurityGroup905CAF36:443"
       }
     },
-    "eksdemonodegroupspotInstanceSecurityGroupfromekseksdemoControlPlaneSecurityGroup905CAF36102565535B59BD5F2": {
+    "eksdemospotInstanceSecurityGroupfromekseksdemoControlPlaneSecurityGroup905CAF36102565535526F674A": {
       "Type": "AWS::EC2::SecurityGroupIngress",
       "Properties": {
         "IpProtocol": "tcp",
@@ -1814,7 +943,7 @@
         "FromPort": 1025,
         "GroupId": {
           "Fn::GetAtt": [
-            "eksdemonodegroupspotInstanceSecurityGroupB2CE2602",
+            "eksdemospotInstanceSecurityGroupA5554830",
             "GroupId"
           ]
         },
@@ -1827,10 +956,10 @@
         "ToPort": 65535
       },
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/node_group_spot/InstanceSecurityGroup/from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535"
+        "aws:cdk:path": "eks/eks_demo/spot/InstanceSecurityGroup/from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535"
       }
     },
-    "eksdemonodegroupspotInstanceRole24B4EC22": {
+    "eksdemospotInstanceRoleC49F8A72": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -1904,47 +1033,46 @@
           },
           {
             "Key": "Name",
-            "Value": "eks/eks_demo/node_group_spot"
+            "Value": "eks/eks_demo/spot"
           }
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/node_group_spot/InstanceRole/Resource"
+        "aws:cdk:path": "eks/eks_demo/spot/InstanceRole/Resource"
       }
     },
-    "eksdemonodegroupspotInstanceProfile83E4CB4D": {
+    "eksdemospotInstanceProfile7170BB3E": {
       "Type": "AWS::IAM::InstanceProfile",
       "Properties": {
         "Roles": [
           {
-            "Ref": "eksdemonodegroupspotInstanceRole24B4EC22"
+            "Ref": "eksdemospotInstanceRoleC49F8A72"
           }
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/node_group_spot/InstanceProfile"
+        "aws:cdk:path": "eks/eks_demo/spot/InstanceProfile"
       }
     },
-    "eksdemonodegroupspotLaunchConfigFBF1E455": {
+    "eksdemospotLaunchConfig90036848": {
       "Type": "AWS::AutoScaling::LaunchConfiguration",
       "Properties": {
         "ImageId": {
           "Ref": "SsmParameterValueawsserviceeksoptimizedami114amazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
         },
-        "InstanceType": "m5.large",
+        "InstanceType": "t3.large",
         "IamInstanceProfile": {
-          "Ref": "eksdemonodegroupspotInstanceProfile83E4CB4D"
+          "Ref": "eksdemospotInstanceProfile7170BB3E"
         },
-        "KeyName": "poc-zhnc",
         "SecurityGroups": [
           {
             "Fn::GetAtt": [
-              "eksdemonodegroupspotInstanceSecurityGroupB2CE2602",
+              "eksdemospotInstanceSecurityGroupA5554830",
               "GroupId"
             ]
           }
         ],
-        "SpotPrice": "1.0",
+        "SpotPrice": "1.1094",
         "UserData": {
           "Fn::Base64": {
             "Fn::Join": [
@@ -1954,27 +1082,26 @@
                 {
                   "Ref": "eksdemo40591292"
                 },
-                " --kubelet-extra-args \"--node-labels lifecycle=Ec2Spot --register-with-taints=spotInstance=true:PreferNoSchedule\" --use-max-pods true\n/opt/aws/bin/cfn-signal --exit-code $? --stack eks --resource eksdemonodegroupspotASG178D3D5A --region us-west-2"
+                " --kubelet-extra-args \"--node-labels lifecycle=Ec2Spot --register-with-taints=spotInstance=true:PreferNoSchedule\" --use-max-pods true\n/opt/aws/bin/cfn-signal --exit-code $? --stack eks --resource eksdemospotASG380F470C --region us-west-2"
               ]
             ]
           }
         }
       },
       "DependsOn": [
-        "eksdemonodegroupspotInstanceRole24B4EC22"
+        "eksdemospotInstanceRoleC49F8A72"
       ],
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/node_group_spot/LaunchConfig"
+        "aws:cdk:path": "eks/eks_demo/spot/LaunchConfig"
       }
     },
-    "eksdemonodegroupspotASG178D3D5A": {
+    "eksdemospotASG380F470C": {
       "Type": "AWS::AutoScaling::AutoScalingGroup",
       "Properties": {
-        "MaxSize": "4",
+        "MaxSize": "10",
         "MinSize": "1",
-        "DesiredCapacity": "3",
         "LaunchConfigurationName": {
-          "Ref": "eksdemonodegroupspotLaunchConfigFBF1E455"
+          "Ref": "eksdemospotLaunchConfig90036848"
         },
         "Tags": [
           {
@@ -2000,18 +1127,18 @@
           {
             "Key": "Name",
             "PropagateAtLaunch": true,
-            "Value": "eks/eks_demo/node_group_spot"
+            "Value": "eks/eks_demo/spot"
           }
         ],
         "VPCZoneIdentifier": [
           {
-            "Ref": "VPCPrivateSubnetSubnet1Subnet69449E4E"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet1Subnet69449E4E31D58FCF"
           },
           {
-            "Ref": "VPCPrivateSubnetSubnet2SubnetA72DC906"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet2SubnetA72DC9065AAC46C9"
           },
           {
-            "Ref": "VPCPrivateSubnetSubnet3SubnetEEA8D73E"
+            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet3SubnetEEA8D73E0EFF0D69"
           }
         ]
       },
@@ -2032,7 +1159,7 @@
         }
       },
       "Metadata": {
-        "aws:cdk:path": "eks/eks_demo/node_group_spot/ASG"
+        "aws:cdk:path": "eks/eks_demo/spot/ASG"
       }
     },
     "eksdemochartspotinterrupthandler0B37D624": {
@@ -2206,234 +1333,6 @@
       "Metadata": {
         "aws:cdk:path": "eks/@aws-cdk--aws-eks.KubectlProvider.NestedStack/@aws-cdk--aws-eks.KubectlProvider.NestedStackResource"
       }
-    },
-    "sgjenkins47BF53FC": {
-      "Type": "AWS::EC2::SecurityGroup",
-      "Properties": {
-        "GroupDescription": "sg_jenkins",
-        "GroupName": "sg_jenkins",
-        "SecurityGroupEgress": [
-          {
-            "CidrIp": "0.0.0.0/0",
-            "Description": "Allow all outbound traffic by default",
-            "IpProtocol": "-1"
-          }
-        ],
-        "SecurityGroupIngress": [
-          {
-            "CidrIp": "0.0.0.0/0",
-            "Description": "sg_jenkins",
-            "FromPort": 22,
-            "IpProtocol": "tcp",
-            "ToPort": 22
-          },
-          {
-            "CidrIp": "119.123.34.135/32",
-            "Description": "sg_jenkins",
-            "FromPort": 80,
-            "IpProtocol": "tcp",
-            "ToPort": 80
-          }
-        ],
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          }
-        ],
-        "VpcId": {
-          "Ref": "VPCB9E5F0B4"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/sg_jenkins/Resource"
-      }
-    },
-    "InstanceSSMCBFA3CF0": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Statement": [
-            {
-              "Action": "sts:AssumeRole",
-              "Effect": "Allow",
-              "Principal": {
-                "Service": "ec2.amazonaws.com"
-              }
-            }
-          ],
-          "Version": "2012-10-17"
-        },
-        "ManagedPolicyArns": [
-          {
-            "Fn::Join": [
-              "",
-              [
-                "arn:",
-                {
-                  "Ref": "AWS::Partition"
-                },
-                ":iam::aws:policy/service-role/AmazonEC2RoleforSSM"
-              ]
-            ]
-          }
-        ],
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/InstanceSSM/Resource"
-      }
-    },
-    "jenkinsInstanceProfileA59DE279": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Roles": [
-          {
-            "Ref": "InstanceSSMCBFA3CF0"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/jenkins/InstanceProfile"
-      }
-    },
-    "jenkinsCE245C40": {
-      "Type": "AWS::EC2::Instance",
-      "Properties": {
-        "AvailabilityZone": "us-west-2a",
-        "BlockDeviceMappings": [
-          {
-            "DeviceName": "/dev/xvda",
-            "Ebs": {
-              "Encrypted": true,
-              "VolumeSize": 10
-            }
-          },
-          {
-            "DeviceName": "/dev/sdb",
-            "Ebs": {
-              "Encrypted": true,
-              "VolumeSize": 100
-            }
-          }
-        ],
-        "IamInstanceProfile": {
-          "Ref": "jenkinsInstanceProfileA59DE279"
-        },
-        "ImageId": {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
-        },
-        "InstanceType": "m5.large",
-        "KeyName": "poc-zhnc",
-        "SecurityGroupIds": [
-          {
-            "Fn::GetAtt": [
-              "sgjenkins47BF53FC",
-              "GroupId"
-            ]
-          }
-        ],
-        "SubnetId": {
-          "Ref": "VPCPublicSubnetSubnet1SubnetB36A48AC"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "Name",
-            "Value": "jenkins"
-          }
-        ],
-        "UserData": {
-          "Fn::Base64": "#!/bin/bash\n\nsudo yum install xfsprogs -y\nsudo mkfs -t xfs /dev/nvme1n1\nsudo mkdir /data\nsudo mount /dev/nvme1n1 /data"
-        }
-      },
-      "DependsOn": [
-        "InstanceSSMCBFA3CF0"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "eks/jenkins/Resource"
-      }
-    },
-    "eksBastionInstanceProfileE2C20FE2": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Roles": [
-          {
-            "Ref": "InstanceSSMCBFA3CF0"
-          }
-        ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "eks/eks-Bastion/InstanceProfile"
-      }
-    },
-    "eksBastion2E4B6334": {
-      "Type": "AWS::EC2::Instance",
-      "Properties": {
-        "AvailabilityZone": "us-west-2a",
-        "BlockDeviceMappings": [
-          {
-            "DeviceName": "/dev/xvda",
-            "Ebs": {
-              "Encrypted": true,
-              "VolumeSize": 10
-            }
-          },
-          {
-            "DeviceName": "/dev/sdb",
-            "Ebs": {
-              "Encrypted": true,
-              "VolumeSize": 100
-            }
-          }
-        ],
-        "IamInstanceProfile": {
-          "Ref": "eksBastionInstanceProfileE2C20FE2"
-        },
-        "ImageId": {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
-        },
-        "InstanceType": "m5.large",
-        "KeyName": "poc-zhnc",
-        "SecurityGroupIds": [
-          {
-            "Fn::GetAtt": [
-              "sgjenkins47BF53FC",
-              "GroupId"
-            ]
-          }
-        ],
-        "SubnetId": {
-          "Ref": "VPCPublicSubnetSubnet1SubnetB36A48AC"
-        },
-        "Tags": [
-          {
-            "Key": "ENV",
-            "Value": "STG"
-          },
-          {
-            "Key": "Name",
-            "Value": "eks-Bastion"
-          }
-        ],
-        "UserData": {
-          "Fn::Base64": "#!/bin/bash\n\nsudo yum install xfsprogs -y\nsudo mkfs -t xfs /dev/nvme1n1\nsudo mkdir /data\nsudo mount /dev/nvme1n1 /data"
-        }
-      },
-      "DependsOn": [
-        "InstanceSSMCBFA3CF0"
-      ],
-      "Metadata": {
-        "aws:cdk:path": "eks/eks-Bastion/Resource"
-      }
     }
   },
   "Outputs": {
@@ -2547,10 +1446,6 @@
     "SsmParameterValueawsserviceeksoptimizedami114amazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter": {
       "Type": "AWS::SSM::Parameter::Value<String>",
       "Default": "/aws/service/eks/optimized-ami/1.14/amazon-linux-2/recommended/image_id"
-    },
-    "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
-      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-      "Default": "/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2"
     }
   }
 }

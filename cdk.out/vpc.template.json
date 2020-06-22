@@ -13,6 +13,10 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC"
           }
@@ -45,6 +49,14 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC/PublicSubnetSubnet1"
           }
@@ -64,6 +76,14 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
           },
           {
             "Key": "Name",
@@ -117,6 +137,14 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC/PublicSubnetSubnet1"
           }
@@ -142,6 +170,14 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
           },
           {
             "Key": "Name",
@@ -176,6 +212,14 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC/PublicSubnetSubnet2"
           }
@@ -195,6 +239,14 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
           },
           {
             "Key": "Name",
@@ -248,6 +300,14 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC/PublicSubnetSubnet2"
           }
@@ -273,6 +333,14 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
           },
           {
             "Key": "Name",
@@ -307,6 +375,14 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC/PublicSubnetSubnet3"
           }
@@ -326,6 +402,14 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/elb",
+            "Value": "1"
           },
           {
             "Key": "Name",
@@ -392,6 +476,14 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/internal-elb",
+            "Value": "1"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC/PrivateSubnetSubnet1"
           }
@@ -411,6 +503,14 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/internal-elb",
+            "Value": "1"
           },
           {
             "Key": "Name",
@@ -474,6 +574,14 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/internal-elb",
+            "Value": "1"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC/PrivateSubnetSubnet2"
           }
@@ -493,6 +601,14 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/internal-elb",
+            "Value": "1"
           },
           {
             "Key": "Name",
@@ -556,6 +672,14 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/internal-elb",
+            "Value": "1"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC/PrivateSubnetSubnet3"
           }
@@ -575,6 +699,14 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
+            "Key": "kubernetes.io/role/internal-elb",
+            "Value": "1"
           },
           {
             "Key": "Name",
@@ -622,6 +754,10 @@
           {
             "Key": "ENV",
             "Value": "STG"
+          },
+          {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
           },
           {
             "Key": "Name",
@@ -700,6 +836,10 @@
             "Value": "STG"
           },
           {
+            "Key": "kubernetes.io/cluster/eks_demo",
+            "Value": "shared"
+          },
+          {
             "Key": "Name",
             "Value": "vpc/VPC"
           }
@@ -747,6 +887,46 @@
       },
       "Export": {
         "Name": "vpc:ExportsOutputRefVPCPublicSubnetSubnet1SubnetB36A48ACBF80D428"
+      }
+    },
+    "ExportsOutputRefVPCPublicSubnetSubnet2Subnet57DB39EA545C68B3": {
+      "Value": {
+        "Ref": "VPCPublicSubnetSubnet2Subnet57DB39EA"
+      },
+      "Export": {
+        "Name": "vpc:ExportsOutputRefVPCPublicSubnetSubnet2Subnet57DB39EA545C68B3"
+      }
+    },
+    "ExportsOutputRefVPCPublicSubnetSubnet3SubnetAB6FC4C06D11E753": {
+      "Value": {
+        "Ref": "VPCPublicSubnetSubnet3SubnetAB6FC4C0"
+      },
+      "Export": {
+        "Name": "vpc:ExportsOutputRefVPCPublicSubnetSubnet3SubnetAB6FC4C06D11E753"
+      }
+    },
+    "ExportsOutputRefVPCPrivateSubnetSubnet1Subnet69449E4E31D58FCF": {
+      "Value": {
+        "Ref": "VPCPrivateSubnetSubnet1Subnet69449E4E"
+      },
+      "Export": {
+        "Name": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet1Subnet69449E4E31D58FCF"
+      }
+    },
+    "ExportsOutputRefVPCPrivateSubnetSubnet2SubnetA72DC9065AAC46C9": {
+      "Value": {
+        "Ref": "VPCPrivateSubnetSubnet2SubnetA72DC906"
+      },
+      "Export": {
+        "Name": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet2SubnetA72DC9065AAC46C9"
+      }
+    },
+    "ExportsOutputRefVPCPrivateSubnetSubnet3SubnetEEA8D73E0EFF0D69": {
+      "Value": {
+        "Ref": "VPCPrivateSubnetSubnet3SubnetEEA8D73E"
+      },
+      "Export": {
+        "Name": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet3SubnetEEA8D73E0EFF0D69"
       }
     }
   }

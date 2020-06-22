@@ -32,6 +32,10 @@
                         "value": "STG"
                       },
                       {
+                        "key": "kubernetes.io/cluster/eks_demo",
+                        "value": "shared"
+                      },
+                      {
                         "key": "Name",
                         "value": "vpc/VPC"
                       }
@@ -69,6 +73,14 @@
                             "value": "STG"
                           },
                           {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
+                          },
+                          {
                             "key": "Name",
                             "value": "vpc/VPC/PublicSubnetSubnet1"
                           }
@@ -93,6 +105,14 @@
                           {
                             "key": "ENV",
                             "value": "STG"
+                          },
+                          {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
                           },
                           {
                             "key": "Name",
@@ -146,6 +166,14 @@
                             "value": "STG"
                           },
                           {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
+                          },
+                          {
                             "key": "Name",
                             "value": "vpc/VPC/PublicSubnetSubnet1"
                           }
@@ -172,6 +200,14 @@
                           {
                             "key": "ENV",
                             "value": "STG"
+                          },
+                          {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
                           },
                           {
                             "key": "Name",
@@ -213,6 +249,14 @@
                             "value": "STG"
                           },
                           {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
+                          },
+                          {
                             "key": "Name",
                             "value": "vpc/VPC/PublicSubnetSubnet2"
                           }
@@ -237,6 +281,14 @@
                           {
                             "key": "ENV",
                             "value": "STG"
+                          },
+                          {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
                           },
                           {
                             "key": "Name",
@@ -290,6 +342,14 @@
                             "value": "STG"
                           },
                           {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
+                          },
+                          {
                             "key": "Name",
                             "value": "vpc/VPC/PublicSubnetSubnet2"
                           }
@@ -316,6 +376,14 @@
                           {
                             "key": "ENV",
                             "value": "STG"
+                          },
+                          {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
                           },
                           {
                             "key": "Name",
@@ -357,6 +425,14 @@
                             "value": "STG"
                           },
                           {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
+                          },
+                          {
                             "key": "Name",
                             "value": "vpc/VPC/PublicSubnetSubnet3"
                           }
@@ -381,6 +457,14 @@
                           {
                             "key": "ENV",
                             "value": "STG"
+                          },
+                          {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/elb",
+                            "value": "1"
                           },
                           {
                             "key": "Name",
@@ -453,6 +537,14 @@
                             "value": "STG"
                           },
                           {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/internal-elb",
+                            "value": "1"
+                          },
+                          {
                             "key": "Name",
                             "value": "vpc/VPC/PrivateSubnetSubnet1"
                           }
@@ -477,6 +569,14 @@
                           {
                             "key": "ENV",
                             "value": "STG"
+                          },
+                          {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/internal-elb",
+                            "value": "1"
                           },
                           {
                             "key": "Name",
@@ -549,6 +649,14 @@
                             "value": "STG"
                           },
                           {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/internal-elb",
+                            "value": "1"
+                          },
+                          {
                             "key": "Name",
                             "value": "vpc/VPC/PrivateSubnetSubnet2"
                           }
@@ -573,6 +681,14 @@
                           {
                             "key": "ENV",
                             "value": "STG"
+                          },
+                          {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/internal-elb",
+                            "value": "1"
                           },
                           {
                             "key": "Name",
@@ -645,6 +761,14 @@
                             "value": "STG"
                           },
                           {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/internal-elb",
+                            "value": "1"
+                          },
+                          {
                             "key": "Name",
                             "value": "vpc/VPC/PrivateSubnetSubnet3"
                           }
@@ -669,6 +793,14 @@
                           {
                             "key": "ENV",
                             "value": "STG"
+                          },
+                          {
+                            "key": "kubernetes.io/cluster/eks_demo",
+                            "value": "shared"
+                          },
+                          {
+                            "key": "kubernetes.io/role/internal-elb",
+                            "value": "1"
                           },
                           {
                             "key": "Name",
@@ -721,6 +853,10 @@
                       {
                         "key": "ENV",
                         "value": "STG"
+                      },
+                      {
+                        "key": "kubernetes.io/cluster/eks_demo",
+                        "value": "shared"
                       },
                       {
                         "key": "Name",
@@ -816,6 +952,10 @@
                                 "value": "STG"
                               },
                               {
+                                "key": "kubernetes.io/cluster/eks_demo",
+                                "value": "shared"
+                              },
+                              {
                                 "key": "Name",
                                 "value": "vpc/VPC"
                               }
@@ -865,8 +1005,2835 @@
               "Output{\"Ref\":\"VPCPublicSubnetSubnet1SubnetB36A48AC\"}": {
                 "id": "Output{\"Ref\":\"VPCPublicSubnetSubnet1SubnetB36A48AC\"}",
                 "path": "vpc/Exports/Output{\"Ref\":\"VPCPublicSubnetSubnet1SubnetB36A48AC\"}"
+              },
+              "Output{\"Ref\":\"VPCPublicSubnetSubnet2Subnet57DB39EA\"}": {
+                "id": "Output{\"Ref\":\"VPCPublicSubnetSubnet2Subnet57DB39EA\"}",
+                "path": "vpc/Exports/Output{\"Ref\":\"VPCPublicSubnetSubnet2Subnet57DB39EA\"}"
+              },
+              "Output{\"Ref\":\"VPCPublicSubnetSubnet3SubnetAB6FC4C0\"}": {
+                "id": "Output{\"Ref\":\"VPCPublicSubnetSubnet3SubnetAB6FC4C0\"}",
+                "path": "vpc/Exports/Output{\"Ref\":\"VPCPublicSubnetSubnet3SubnetAB6FC4C0\"}"
+              },
+              "Output{\"Ref\":\"VPCPrivateSubnetSubnet1Subnet69449E4E\"}": {
+                "id": "Output{\"Ref\":\"VPCPrivateSubnetSubnet1Subnet69449E4E\"}",
+                "path": "vpc/Exports/Output{\"Ref\":\"VPCPrivateSubnetSubnet1Subnet69449E4E\"}"
+              },
+              "Output{\"Ref\":\"VPCPrivateSubnetSubnet2SubnetA72DC906\"}": {
+                "id": "Output{\"Ref\":\"VPCPrivateSubnetSubnet2SubnetA72DC906\"}",
+                "path": "vpc/Exports/Output{\"Ref\":\"VPCPrivateSubnetSubnet2SubnetA72DC906\"}"
+              },
+              "Output{\"Ref\":\"VPCPrivateSubnetSubnet3SubnetEEA8D73E\"}": {
+                "id": "Output{\"Ref\":\"VPCPrivateSubnetSubnet3SubnetEEA8D73E\"}",
+                "path": "vpc/Exports/Output{\"Ref\":\"VPCPrivateSubnetSubnet3SubnetEEA8D73E\"}"
               }
             }
+          }
+        }
+      },
+      "eks": {
+        "id": "eks",
+        "path": "eks",
+        "children": {
+          "AdminRole": {
+            "id": "AdminRole",
+            "path": "eks/AdminRole",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "eks/AdminRole/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "AWS": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "arn:",
+                                  {
+                                    "Ref": "AWS::Partition"
+                                  },
+                                  ":iam::716414967168:root"
+                                ]
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "tags": [
+                      {
+                        "key": "ENV",
+                        "value": "STG"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "eks_demo": {
+            "id": "eks_demo",
+            "path": "eks/eks_demo",
+            "children": {
+              "Role": {
+                "id": "Role",
+                "path": "eks/eks_demo/Role",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/eks_demo/Role/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "eks.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/AmazonEKSClusterPolicy"
+                              ]
+                            ]
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "ENV",
+                            "value": "STG"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "ControlPlaneSecurityGroup": {
+                "id": "ControlPlaneSecurityGroup",
+                "path": "eks/eks_demo/ControlPlaneSecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/eks_demo/ControlPlaneSecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "EKS Control Plane Security Group",
+                        "securityGroupEgress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "description": "Allow all outbound traffic by default",
+                            "ipProtocol": "-1"
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "ENV",
+                            "value": "STG"
+                          }
+                        ],
+                        "vpcId": {
+                          "Fn::ImportValue": "vpc:ExportsOutputRefVPCB9E5F0B4BD23A326"
+                        }
+                      }
+                    }
+                  },
+                  "from ekseksdemonodegroupInstanceSecurityGroup87500402:443": {
+                    "id": "from ekseksdemonodegroupInstanceSecurityGroup87500402:443",
+                    "path": "eks/eks_demo/ControlPlaneSecurityGroup/from ekseksdemonodegroupInstanceSecurityGroup87500402:443",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                      "aws:cdk:cloudformation:props": {
+                        "ipProtocol": "tcp",
+                        "description": "from ekseksdemonodegroupInstanceSecurityGroup87500402:443",
+                        "fromPort": 443,
+                        "groupId": {
+                          "Fn::GetAtt": [
+                            "eksdemoControlPlaneSecurityGroupA18671E9",
+                            "GroupId"
+                          ]
+                        },
+                        "sourceSecurityGroupId": {
+                          "Fn::GetAtt": [
+                            "eksdemonodegroupInstanceSecurityGroupD667EAEB",
+                            "GroupId"
+                          ]
+                        },
+                        "toPort": 443
+                      }
+                    }
+                  },
+                  "from ekseksdemospotInstanceSecurityGroupF0118E63:443": {
+                    "id": "from ekseksdemospotInstanceSecurityGroupF0118E63:443",
+                    "path": "eks/eks_demo/ControlPlaneSecurityGroup/from ekseksdemospotInstanceSecurityGroupF0118E63:443",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                      "aws:cdk:cloudformation:props": {
+                        "ipProtocol": "tcp",
+                        "description": "from ekseksdemospotInstanceSecurityGroupF0118E63:443",
+                        "fromPort": 443,
+                        "groupId": {
+                          "Fn::GetAtt": [
+                            "eksdemoControlPlaneSecurityGroupA18671E9",
+                            "GroupId"
+                          ]
+                        },
+                        "sourceSecurityGroupId": {
+                          "Fn::GetAtt": [
+                            "eksdemospotInstanceSecurityGroupA5554830",
+                            "GroupId"
+                          ]
+                        },
+                        "toPort": 443
+                      }
+                    }
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "eks/eks_demo/Resource",
+                "children": {
+                  "CreationRole": {
+                    "id": "CreationRole",
+                    "path": "eks/eks_demo/Resource/CreationRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/eks_demo/Resource/CreationRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "AWS": [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454",
+                                          "Outputs.eksawscdkawseksClusterResourceProviderOnEventHandlerServiceRole706690C6Arn"
+                                        ]
+                                      },
+                                      {
+                                        "Fn::GetAtt": [
+                                          "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454",
+                                          "Outputs.eksawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRoleEBFBAF88Arn"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "AWS": {
+                                      "Fn::GetAtt": [
+                                        "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
+                                        "Outputs.eksawscdkawseksKubectlProviderHandlerServiceRole8F9356D2Arn"
+                                      ]
+                                    }
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "eks/eks_demo/Resource/CreationRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "eks/eks_demo/Resource/CreationRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "iam:PassRole",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "eksdemoRole4C3F9C33",
+                                          "Arn"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "Action": [
+                                        "ec2:DescribeSubnets",
+                                        "ec2:DescribeRouteTables"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": [
+                                        "eks:CreateCluster",
+                                        "eks:DescribeCluster",
+                                        "eks:DescribeUpdate",
+                                        "eks:DeleteCluster",
+                                        "eks:UpdateClusterVersion",
+                                        "eks:UpdateClusterConfig",
+                                        "eks:CreateFargateProfile",
+                                        "eks:TagResource",
+                                        "eks:UntagResource"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              "arn:",
+                                              {
+                                                "Ref": "AWS::Partition"
+                                              },
+                                              ":eks:us-west-2:716414967168:cluster/eks_demo"
+                                            ]
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              "arn:",
+                                              {
+                                                "Ref": "AWS::Partition"
+                                              },
+                                              ":eks:us-west-2:716414967168:cluster/eks_demo/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Action": [
+                                        "eks:DescribeFargateProfile",
+                                        "eks:DeleteFargateProfile"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:",
+                                            {
+                                              "Ref": "AWS::Partition"
+                                            },
+                                            ":eks:us-west-2:716414967168:fargateprofile/eks_demo/*"
+                                          ]
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "Action": "iam:GetRole",
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "iam:CreateServiceLinkedRole",
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "eksdemoCreationRoleDefaultPolicy00D18AE0",
+                                "roles": [
+                                  {
+                                    "Ref": "eksdemoCreationRole26CBA2F7"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/eks_demo/Resource/Resource",
+                    "children": {
+                      "Default": {
+                        "id": "Default",
+                        "path": "eks/eks_demo/Resource/Resource/Default"
+                      }
+                    }
+                  }
+                }
+              },
+              "ClusterName": {
+                "id": "ClusterName",
+                "path": "eks/eks_demo/ClusterName"
+              },
+              "AwsAuth": {
+                "id": "AwsAuth",
+                "path": "eks/eks_demo/AwsAuth",
+                "children": {
+                  "manifest": {
+                    "id": "manifest",
+                    "path": "eks/eks_demo/AwsAuth/manifest",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/eks_demo/AwsAuth/manifest/Resource",
+                        "children": {
+                          "Default": {
+                            "id": "Default",
+                            "path": "eks/eks_demo/AwsAuth/manifest/Resource/Default"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "NodegroupDefaultCapacity": {
+                "id": "NodegroupDefaultCapacity",
+                "path": "eks/eks_demo/NodegroupDefaultCapacity",
+                "children": {
+                  "NodeGroupRole": {
+                    "id": "NodeGroupRole",
+                    "path": "eks/eks_demo/NodegroupDefaultCapacity/NodeGroupRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/eks_demo/NodegroupDefaultCapacity/NodeGroupRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "ec2.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEKSWorkerNodePolicy"
+                                  ]
+                                ]
+                              },
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEKS_CNI_Policy"
+                                  ]
+                                ]
+                              },
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/eks_demo/NodegroupDefaultCapacity/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EKS::Nodegroup",
+                      "aws:cdk:cloudformation:props": {
+                        "clusterName": {
+                          "Ref": "eksdemo40591292"
+                        },
+                        "nodeRole": {
+                          "Fn::GetAtt": [
+                            "eksdemoNodegroupDefaultCapacityNodeGroupRoleEBDE81F2",
+                            "Arn"
+                          ]
+                        },
+                        "subnets": [
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet1Subnet69449E4E31D58FCF"
+                          },
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet2SubnetA72DC9065AAC46C9"
+                          },
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet3SubnetEEA8D73E0EFF0D69"
+                          }
+                        ],
+                        "forceUpdateEnabled": true,
+                        "instanceTypes": [
+                          "m5.large"
+                        ],
+                        "scalingConfig": {
+                          "desiredSize": 1,
+                          "maxSize": 1,
+                          "minSize": 1
+                        },
+                        "tags": {
+                          "ENV": "STG"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "ConfigCommand": {
+                "id": "ConfigCommand",
+                "path": "eks/eks_demo/ConfigCommand"
+              },
+              "GetTokenCommand": {
+                "id": "GetTokenCommand",
+                "path": "eks/eks_demo/GetTokenCommand"
+              },
+              "node_group": {
+                "id": "node_group",
+                "path": "eks/eks_demo/node_group",
+                "children": {
+                  "InstanceSecurityGroup": {
+                    "id": "InstanceSecurityGroup",
+                    "path": "eks/eks_demo/node_group/InstanceSecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/eks_demo/node_group/InstanceSecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "eks/eks_demo/node_group/InstanceSecurityGroup",
+                            "securityGroupEgress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "description": "Allow all outbound traffic by default",
+                                "ipProtocol": "-1"
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              },
+                              {
+                                "key": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "kubernetes.io/cluster/",
+                                      {
+                                        "Ref": "eksdemo40591292"
+                                      }
+                                    ]
+                                  ]
+                                },
+                                "value": "owned"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "eks/eks_demo/node_group"
+                              }
+                            ],
+                            "vpcId": {
+                              "Fn::ImportValue": "vpc:ExportsOutputRefVPCB9E5F0B4BD23A326"
+                            }
+                          }
+                        }
+                      },
+                      "from ekseksdemonodegroupInstanceSecurityGroup87500402:ALL TRAFFIC": {
+                        "id": "from ekseksdemonodegroupInstanceSecurityGroup87500402:ALL TRAFFIC",
+                        "path": "eks/eks_demo/node_group/InstanceSecurityGroup/from ekseksdemonodegroupInstanceSecurityGroup87500402:ALL TRAFFIC",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "-1",
+                            "description": "from ekseksdemonodegroupInstanceSecurityGroup87500402:ALL TRAFFIC",
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "eksdemonodegroupInstanceSecurityGroupD667EAEB",
+                                "GroupId"
+                              ]
+                            },
+                            "sourceSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "eksdemonodegroupInstanceSecurityGroupD667EAEB",
+                                "GroupId"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "from ekseksdemoControlPlaneSecurityGroup905CAF36:443": {
+                        "id": "from ekseksdemoControlPlaneSecurityGroup905CAF36:443",
+                        "path": "eks/eks_demo/node_group/InstanceSecurityGroup/from ekseksdemoControlPlaneSecurityGroup905CAF36:443",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "tcp",
+                            "description": "from ekseksdemoControlPlaneSecurityGroup905CAF36:443",
+                            "fromPort": 443,
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "eksdemonodegroupInstanceSecurityGroupD667EAEB",
+                                "GroupId"
+                              ]
+                            },
+                            "sourceSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "eksdemoControlPlaneSecurityGroupA18671E9",
+                                "GroupId"
+                              ]
+                            },
+                            "toPort": 443
+                          }
+                        }
+                      },
+                      "from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535": {
+                        "id": "from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535",
+                        "path": "eks/eks_demo/node_group/InstanceSecurityGroup/from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "tcp",
+                            "description": "from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535",
+                            "fromPort": 1025,
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "eksdemonodegroupInstanceSecurityGroupD667EAEB",
+                                "GroupId"
+                              ]
+                            },
+                            "sourceSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "eksdemoControlPlaneSecurityGroupA18671E9",
+                                "GroupId"
+                              ]
+                            },
+                            "toPort": 65535
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "InstanceRole": {
+                    "id": "InstanceRole",
+                    "path": "eks/eks_demo/node_group/InstanceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/eks_demo/node_group/InstanceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "ec2.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEKSWorkerNodePolicy"
+                                  ]
+                                ]
+                              },
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEKS_CNI_Policy"
+                                  ]
+                                ]
+                              },
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              },
+                              {
+                                "key": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "kubernetes.io/cluster/",
+                                      {
+                                        "Ref": "eksdemo40591292"
+                                      }
+                                    ]
+                                  ]
+                                },
+                                "value": "owned"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "eks/eks_demo/node_group"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "InstanceProfile": {
+                    "id": "InstanceProfile",
+                    "path": "eks/eks_demo/node_group/InstanceProfile",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::InstanceProfile",
+                      "aws:cdk:cloudformation:props": {
+                        "roles": [
+                          {
+                            "Ref": "eksdemonodegroupInstanceRole852699D8"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "LaunchConfig": {
+                    "id": "LaunchConfig",
+                    "path": "eks/eks_demo/node_group/LaunchConfig",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::LaunchConfiguration",
+                      "aws:cdk:cloudformation:props": {
+                        "imageId": {
+                          "Ref": "SsmParameterValueawsserviceeksoptimizedami114amazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+                        },
+                        "instanceType": "m5.large",
+                        "iamInstanceProfile": {
+                          "Ref": "eksdemonodegroupInstanceProfile55E84048"
+                        },
+                        "keyName": "poc-zhnc",
+                        "securityGroups": [
+                          {
+                            "Fn::GetAtt": [
+                              "eksdemonodegroupInstanceSecurityGroupD667EAEB",
+                              "GroupId"
+                            ]
+                          }
+                        ],
+                        "userData": {
+                          "Fn::Base64": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "#!/bin/bash\nset -o xtrace\n/etc/eks/bootstrap.sh ",
+                                {
+                                  "Ref": "eksdemo40591292"
+                                },
+                                " --kubelet-extra-args \"--node-labels lifecycle=OnDemand\" --use-max-pods true\n/opt/aws/bin/cfn-signal --exit-code $? --stack eks --resource eksdemonodegroupASG19408A6A --region us-west-2"
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "ASG": {
+                    "id": "ASG",
+                    "path": "eks/eks_demo/node_group/ASG",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::AutoScalingGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "maxSize": "4",
+                        "minSize": "1",
+                        "desiredCapacity": "3",
+                        "launchConfigurationName": {
+                          "Ref": "eksdemonodegroupLaunchConfig0E80BE33"
+                        },
+                        "tags": [
+                          {
+                            "key": "ENV",
+                            "value": "STG",
+                            "propagateAtLaunch": true
+                          },
+                          {
+                            "key": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "kubernetes.io/cluster/",
+                                  {
+                                    "Ref": "eksdemo40591292"
+                                  }
+                                ]
+                              ]
+                            },
+                            "value": "owned",
+                            "propagateAtLaunch": true
+                          },
+                          {
+                            "key": "Name",
+                            "value": "eks/eks_demo/node_group",
+                            "propagateAtLaunch": true
+                          }
+                        ],
+                        "vpcZoneIdentifier": [
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet1Subnet69449E4E31D58FCF"
+                          },
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet2SubnetA72DC9065AAC46C9"
+                          },
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet3SubnetEEA8D73E0EFF0D69"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "spot": {
+                "id": "spot",
+                "path": "eks/eks_demo/spot",
+                "children": {
+                  "InstanceSecurityGroup": {
+                    "id": "InstanceSecurityGroup",
+                    "path": "eks/eks_demo/spot/InstanceSecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/eks_demo/spot/InstanceSecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "eks/eks_demo/spot/InstanceSecurityGroup",
+                            "securityGroupEgress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "description": "Allow all outbound traffic by default",
+                                "ipProtocol": "-1"
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              },
+                              {
+                                "key": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "kubernetes.io/cluster/",
+                                      {
+                                        "Ref": "eksdemo40591292"
+                                      }
+                                    ]
+                                  ]
+                                },
+                                "value": "owned"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "eks/eks_demo/spot"
+                              }
+                            ],
+                            "vpcId": {
+                              "Fn::ImportValue": "vpc:ExportsOutputRefVPCB9E5F0B4BD23A326"
+                            }
+                          }
+                        }
+                      },
+                      "from ekseksdemospotInstanceSecurityGroupF0118E63:ALL TRAFFIC": {
+                        "id": "from ekseksdemospotInstanceSecurityGroupF0118E63:ALL TRAFFIC",
+                        "path": "eks/eks_demo/spot/InstanceSecurityGroup/from ekseksdemospotInstanceSecurityGroupF0118E63:ALL TRAFFIC",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "-1",
+                            "description": "from ekseksdemospotInstanceSecurityGroupF0118E63:ALL TRAFFIC",
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "eksdemospotInstanceSecurityGroupA5554830",
+                                "GroupId"
+                              ]
+                            },
+                            "sourceSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "eksdemospotInstanceSecurityGroupA5554830",
+                                "GroupId"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "from ekseksdemoControlPlaneSecurityGroup905CAF36:443": {
+                        "id": "from ekseksdemoControlPlaneSecurityGroup905CAF36:443",
+                        "path": "eks/eks_demo/spot/InstanceSecurityGroup/from ekseksdemoControlPlaneSecurityGroup905CAF36:443",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "tcp",
+                            "description": "from ekseksdemoControlPlaneSecurityGroup905CAF36:443",
+                            "fromPort": 443,
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "eksdemospotInstanceSecurityGroupA5554830",
+                                "GroupId"
+                              ]
+                            },
+                            "sourceSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "eksdemoControlPlaneSecurityGroupA18671E9",
+                                "GroupId"
+                              ]
+                            },
+                            "toPort": 443
+                          }
+                        }
+                      },
+                      "from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535": {
+                        "id": "from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535",
+                        "path": "eks/eks_demo/spot/InstanceSecurityGroup/from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "tcp",
+                            "description": "from ekseksdemoControlPlaneSecurityGroup905CAF36:1025-65535",
+                            "fromPort": 1025,
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "eksdemospotInstanceSecurityGroupA5554830",
+                                "GroupId"
+                              ]
+                            },
+                            "sourceSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "eksdemoControlPlaneSecurityGroupA18671E9",
+                                "GroupId"
+                              ]
+                            },
+                            "toPort": 65535
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "InstanceRole": {
+                    "id": "InstanceRole",
+                    "path": "eks/eks_demo/spot/InstanceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/eks_demo/spot/InstanceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "ec2.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEKSWorkerNodePolicy"
+                                  ]
+                                ]
+                              },
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEKS_CNI_Policy"
+                                  ]
+                                ]
+                              },
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              },
+                              {
+                                "key": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "kubernetes.io/cluster/",
+                                      {
+                                        "Ref": "eksdemo40591292"
+                                      }
+                                    ]
+                                  ]
+                                },
+                                "value": "owned"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "eks/eks_demo/spot"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "InstanceProfile": {
+                    "id": "InstanceProfile",
+                    "path": "eks/eks_demo/spot/InstanceProfile",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::InstanceProfile",
+                      "aws:cdk:cloudformation:props": {
+                        "roles": [
+                          {
+                            "Ref": "eksdemospotInstanceRoleC49F8A72"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "LaunchConfig": {
+                    "id": "LaunchConfig",
+                    "path": "eks/eks_demo/spot/LaunchConfig",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::LaunchConfiguration",
+                      "aws:cdk:cloudformation:props": {
+                        "imageId": {
+                          "Ref": "SsmParameterValueawsserviceeksoptimizedami114amazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+                        },
+                        "instanceType": "t3.large",
+                        "iamInstanceProfile": {
+                          "Ref": "eksdemospotInstanceProfile7170BB3E"
+                        },
+                        "securityGroups": [
+                          {
+                            "Fn::GetAtt": [
+                              "eksdemospotInstanceSecurityGroupA5554830",
+                              "GroupId"
+                            ]
+                          }
+                        ],
+                        "spotPrice": "1.1094",
+                        "userData": {
+                          "Fn::Base64": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "#!/bin/bash\nset -o xtrace\n/etc/eks/bootstrap.sh ",
+                                {
+                                  "Ref": "eksdemo40591292"
+                                },
+                                " --kubelet-extra-args \"--node-labels lifecycle=Ec2Spot --register-with-taints=spotInstance=true:PreferNoSchedule\" --use-max-pods true\n/opt/aws/bin/cfn-signal --exit-code $? --stack eks --resource eksdemospotASG380F470C --region us-west-2"
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "ASG": {
+                    "id": "ASG",
+                    "path": "eks/eks_demo/spot/ASG",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::AutoScalingGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "maxSize": "10",
+                        "minSize": "1",
+                        "launchConfigurationName": {
+                          "Ref": "eksdemospotLaunchConfig90036848"
+                        },
+                        "tags": [
+                          {
+                            "key": "ENV",
+                            "value": "STG",
+                            "propagateAtLaunch": true
+                          },
+                          {
+                            "key": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "kubernetes.io/cluster/",
+                                  {
+                                    "Ref": "eksdemo40591292"
+                                  }
+                                ]
+                              ]
+                            },
+                            "value": "owned",
+                            "propagateAtLaunch": true
+                          },
+                          {
+                            "key": "Name",
+                            "value": "eks/eks_demo/spot",
+                            "propagateAtLaunch": true
+                          }
+                        ],
+                        "vpcZoneIdentifier": [
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet1Subnet69449E4E31D58FCF"
+                          },
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet2SubnetA72DC9065AAC46C9"
+                          },
+                          {
+                            "Fn::ImportValue": "vpc:ExportsOutputRefVPCPrivateSubnetSubnet3SubnetEEA8D73E0EFF0D69"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "chart-spot-interrupt-handler": {
+                "id": "chart-spot-interrupt-handler",
+                "path": "eks/eks_demo/chart-spot-interrupt-handler",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/eks_demo/chart-spot-interrupt-handler/Resource",
+                    "children": {
+                      "Default": {
+                        "id": "Default",
+                        "path": "eks/eks_demo/chart-spot-interrupt-handler/Resource/Default"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "@aws-cdk--aws-eks.ClusterResourceProvider": {
+            "id": "@aws-cdk--aws-eks.ClusterResourceProvider",
+            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider",
+            "children": {
+              "OnEventHandler": {
+                "id": "OnEventHandler",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21Ref"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "handler": "index.onEvent",
+                        "role": {
+                          "Fn::GetAtt": [
+                            "OnEventHandlerServiceRole15A26729",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs12.x",
+                        "description": "onEvent handler for EKS cluster resource provider",
+                        "tags": [
+                          {
+                            "key": "ENV",
+                            "value": "STG"
+                          }
+                        ],
+                        "timeout": 60
+                      }
+                    }
+                  }
+                }
+              },
+              "IsCompleteHandler": {
+                "id": "IsCompleteHandler",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21Ref"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "handler": "index.isComplete",
+                        "role": {
+                          "Fn::GetAtt": [
+                            "IsCompleteHandlerServiceRole5810CC58",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs12.x",
+                        "description": "isComplete handler for EKS cluster resource provider",
+                        "tags": [
+                          {
+                            "key": "ENV",
+                            "value": "STG"
+                          }
+                        ],
+                        "timeout": 60
+                      }
+                    }
+                  }
+                }
+              },
+              "Provider": {
+                "id": "Provider",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider",
+                "children": {
+                  "framework-onEvent": {
+                    "id": "framework-onEvent",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent",
+                    "children": {
+                      "ServiceRole": {
+                        "id": "ServiceRole",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "Service": "lambda.amazonaws.com"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "managedPolicyArns": [
+                                  {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                      ]
+                                    ]
+                                  }
+                                ],
+                                "tags": [
+                                  {
+                                    "key": "ENV",
+                                    "value": "STG"
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "OnEventHandler42BEBAE0",
+                                              "Arn"
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "IsCompleteHandler7073F4DA",
+                                              "Arn"
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "Action": "states:StartExecution",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Ref": "Providerwaiterstatemachine5D4A9DF0"
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133",
+                                    "roles": [
+                                      {
+                                        "Ref": "ProviderframeworkonEventServiceRole9FF04296"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Code": {
+                        "id": "Code",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Code",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Code/Stage"
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Code/AssetBucket"
+                          }
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                          "aws:cdk:cloudformation:props": {
+                            "code": {
+                              "s3Bucket": {
+                                "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref"
+                              },
+                              "s3Key": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::Select": [
+                                        0,
+                                        {
+                                          "Fn::Split": [
+                                            "||",
+                                            {
+                                              "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Select": [
+                                        1,
+                                        {
+                                          "Fn::Split": [
+                                            "||",
+                                            {
+                                              "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            },
+                            "handler": "framework.onEvent",
+                            "role": {
+                              "Fn::GetAtt": [
+                                "ProviderframeworkonEventServiceRole9FF04296",
+                                "Arn"
+                              ]
+                            },
+                            "runtime": "nodejs10.x",
+                            "environment": {
+                              "variables": {
+                                "USER_ON_EVENT_FUNCTION_ARN": {
+                                  "Fn::GetAtt": [
+                                    "OnEventHandler42BEBAE0",
+                                    "Arn"
+                                  ]
+                                },
+                                "USER_IS_COMPLETE_FUNCTION_ARN": {
+                                  "Fn::GetAtt": [
+                                    "IsCompleteHandler7073F4DA",
+                                    "Arn"
+                                  ]
+                                },
+                                "WAITER_STATE_MACHINE_ARN": {
+                                  "Ref": "Providerwaiterstatemachine5D4A9DF0"
+                                }
+                              }
+                            },
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ],
+                            "timeout": 900
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "framework-isComplete": {
+                    "id": "framework-isComplete",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete",
+                    "children": {
+                      "ServiceRole": {
+                        "id": "ServiceRole",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "Service": "lambda.amazonaws.com"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "managedPolicyArns": [
+                                  {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                      ]
+                                    ]
+                                  }
+                                ],
+                                "tags": [
+                                  {
+                                    "key": "ENV",
+                                    "value": "STG"
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "OnEventHandler42BEBAE0",
+                                              "Arn"
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "IsCompleteHandler7073F4DA",
+                                              "Arn"
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC",
+                                    "roles": [
+                                      {
+                                        "Ref": "ProviderframeworkisCompleteServiceRoleB1087139"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Code": {
+                        "id": "Code",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Code",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Code/Stage"
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Code/AssetBucket"
+                          }
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                          "aws:cdk:cloudformation:props": {
+                            "code": {
+                              "s3Bucket": {
+                                "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref"
+                              },
+                              "s3Key": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::Select": [
+                                        0,
+                                        {
+                                          "Fn::Split": [
+                                            "||",
+                                            {
+                                              "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Select": [
+                                        1,
+                                        {
+                                          "Fn::Split": [
+                                            "||",
+                                            {
+                                              "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            },
+                            "handler": "framework.isComplete",
+                            "role": {
+                              "Fn::GetAtt": [
+                                "ProviderframeworkisCompleteServiceRoleB1087139",
+                                "Arn"
+                              ]
+                            },
+                            "runtime": "nodejs10.x",
+                            "environment": {
+                              "variables": {
+                                "USER_ON_EVENT_FUNCTION_ARN": {
+                                  "Fn::GetAtt": [
+                                    "OnEventHandler42BEBAE0",
+                                    "Arn"
+                                  ]
+                                },
+                                "USER_IS_COMPLETE_FUNCTION_ARN": {
+                                  "Fn::GetAtt": [
+                                    "IsCompleteHandler7073F4DA",
+                                    "Arn"
+                                  ]
+                                }
+                              }
+                            },
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ],
+                            "timeout": 900
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "framework-onTimeout": {
+                    "id": "framework-onTimeout",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout",
+                    "children": {
+                      "ServiceRole": {
+                        "id": "ServiceRole",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "Service": "lambda.amazonaws.com"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "managedPolicyArns": [
+                                  {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                      ]
+                                    ]
+                                  }
+                                ],
+                                "tags": [
+                                  {
+                                    "key": "ENV",
+                                    "value": "STG"
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "OnEventHandler42BEBAE0",
+                                              "Arn"
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "IsCompleteHandler7073F4DA",
+                                              "Arn"
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F",
+                                    "roles": [
+                                      {
+                                        "Ref": "ProviderframeworkonTimeoutServiceRole28643D26"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Code": {
+                        "id": "Code",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Code",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Code/Stage"
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Code/AssetBucket"
+                          }
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                          "aws:cdk:cloudformation:props": {
+                            "code": {
+                              "s3Bucket": {
+                                "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref"
+                              },
+                              "s3Key": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::Select": [
+                                        0,
+                                        {
+                                          "Fn::Split": [
+                                            "||",
+                                            {
+                                              "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Select": [
+                                        1,
+                                        {
+                                          "Fn::Split": [
+                                            "||",
+                                            {
+                                              "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            },
+                            "handler": "framework.onTimeout",
+                            "role": {
+                              "Fn::GetAtt": [
+                                "ProviderframeworkonTimeoutServiceRole28643D26",
+                                "Arn"
+                              ]
+                            },
+                            "runtime": "nodejs10.x",
+                            "environment": {
+                              "variables": {
+                                "USER_ON_EVENT_FUNCTION_ARN": {
+                                  "Fn::GetAtt": [
+                                    "OnEventHandler42BEBAE0",
+                                    "Arn"
+                                  ]
+                                },
+                                "USER_IS_COMPLETE_FUNCTION_ARN": {
+                                  "Fn::GetAtt": [
+                                    "IsCompleteHandler7073F4DA",
+                                    "Arn"
+                                  ]
+                                }
+                              }
+                            },
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ],
+                            "timeout": 900
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "waiter-state-machine": {
+                    "id": "waiter-state-machine",
+                    "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine",
+                    "children": {
+                      "Role": {
+                        "id": "Role",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "Service": "states.us-west-2.amazonaws.com"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "tags": [
+                                  {
+                                    "key": "ENV",
+                                    "value": "STG"
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "ProviderframeworkisComplete26D7B0CB",
+                                              "Arn"
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "ProviderframeworkonTimeout0B47CA38",
+                                              "Arn"
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A",
+                                    "roles": [
+                                      {
+                                        "Ref": "ProviderwaiterstatemachineRole0C7159F9"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource"
+                      }
+                    }
+                  }
+                }
+              },
+              "eksawscdkawseksClusterResourceProviderOnEventHandlerServiceRole706690C6Arn": {
+                "id": "eksawscdkawseksClusterResourceProviderOnEventHandlerServiceRole706690C6Arn",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/eksawscdkawseksClusterResourceProviderOnEventHandlerServiceRole706690C6Arn"
+              },
+              "eksawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRoleEBFBAF88Arn": {
+                "id": "eksawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRoleEBFBAF88Arn",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/eksawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRoleEBFBAF88Arn"
+              },
+              "eksawscdkawseksClusterResourceProviderframeworkonEvent4680128CArn": {
+                "id": "eksawscdkawseksClusterResourceProviderframeworkonEvent4680128CArn",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/eksawscdkawseksClusterResourceProviderframeworkonEvent4680128CArn"
+              },
+              "reference-to-eksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21.Ref": {
+                "id": "reference-to-eksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21.Ref",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/reference-to-eksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21.Ref"
+              },
+              "reference-to-eksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605C.Ref": {
+                "id": "reference-to-eksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605C.Ref",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/reference-to-eksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605C.Ref"
+              },
+              "reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48.Ref": {
+                "id": "reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48.Ref",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48.Ref"
+              },
+              "reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696.Ref": {
+                "id": "reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696.Ref",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696.Ref"
+              }
+            }
+          },
+          "@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack": {
+            "id": "@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack",
+            "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack",
+            "children": {
+              "@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource": {
+                "id": "@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource",
+                "path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFormation::Stack",
+                  "aws:cdk:cloudformation:props": {
+                    "templateUrl": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "https://s3.us-west-2.",
+                          {
+                            "Ref": "AWS::URLSuffix"
+                          },
+                          "/",
+                          {
+                            "Ref": "AssetParameters4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068fS3Bucket4ED6DE3C"
+                          },
+                          "/",
+                          {
+                            "Fn::Select": [
+                              0,
+                              {
+                                "Fn::Split": [
+                                  "||",
+                                  {
+                                    "Ref": "AssetParameters4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068fS3VersionKey72C31F8C"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "Fn::Select": [
+                              1,
+                              {
+                                "Fn::Split": [
+                                  "||",
+                                  {
+                                    "Ref": "AssetParameters4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068fS3VersionKey72C31F8C"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "parameters": {
+                      "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21Ref": {
+                        "Ref": "AssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket2C6BE99F"
+                      },
+                      "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef": {
+                        "Ref": "AssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey4D7F7B64"
+                      },
+                      "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref": {
+                        "Ref": "AssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketCE32EE50"
+                      },
+                      "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref": {
+                        "Ref": "AssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKeyE2AE42A5"
+                      }
+                    },
+                    "tags": [
+                      {
+                        "key": "ENV",
+                        "value": "STG"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "eks/AssetParameters",
+            "children": {
+              "fcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796": {
+                "id": "fcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796",
+                "path": "eks/AssetParameters/fcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "eks/AssetParameters/fcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "eks/AssetParameters/fcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "eks/AssetParameters/fcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796/ArtifactHash"
+                  }
+                }
+              },
+              "505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d": {
+                "id": "505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d",
+                "path": "eks/AssetParameters/505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "eks/AssetParameters/505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "eks/AssetParameters/505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "eks/AssetParameters/505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d/ArtifactHash"
+                  }
+                }
+              },
+              "ca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9": {
+                "id": "ca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9",
+                "path": "eks/AssetParameters/ca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "eks/AssetParameters/ca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "eks/AssetParameters/ca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "eks/AssetParameters/ca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9/ArtifactHash"
+                  }
+                }
+              },
+              "4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068f": {
+                "id": "4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068f",
+                "path": "eks/AssetParameters/4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068f",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "eks/AssetParameters/4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068f/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "eks/AssetParameters/4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068f/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "eks/AssetParameters/4a242329ceeee9a3e512878dd9a19da73568f78d5b96ed2b62247c7c0623068f/ArtifactHash"
+                  }
+                }
+              },
+              "ffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8d": {
+                "id": "ffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8d",
+                "path": "eks/AssetParameters/ffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8d",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "eks/AssetParameters/ffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8d/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "eks/AssetParameters/ffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8d/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "eks/AssetParameters/ffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8d/ArtifactHash"
+                  }
+                }
+              }
+            }
+          },
+          "@aws-cdk--aws-eks.KubectlProvider": {
+            "id": "@aws-cdk--aws-eks.KubectlProvider",
+            "path": "eks/@aws-cdk--aws-eks.KubectlProvider",
+            "children": {
+              "kubectl-layer-2.0.0-beta2": {
+                "id": "kubectl-layer-2.0.0-beta2",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/kubectl-layer-2.0.0-beta2",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/@aws-cdk--aws-eks.KubectlProvider/kubectl-layer-2.0.0-beta2/Resource"
+                  }
+                }
+              },
+              "Handler": {
+                "id": "Handler",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "eks:DescribeCluster",
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "HandlerServiceRoleDefaultPolicyCBD0CC91",
+                                "roles": [
+                                  {
+                                    "Ref": "HandlerServiceRoleFCDC14AE"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Handler/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "referencetoeksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3Bucket65166B2FRef"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "referencetoeksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3VersionKey5519A1A9Ref"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "referencetoeksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3VersionKey5519A1A9Ref"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "handler": "index.handler",
+                        "role": {
+                          "Fn::GetAtt": [
+                            "HandlerServiceRoleFCDC14AE",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "python3.7",
+                        "layers": [
+                          {
+                            "Fn::GetAtt": [
+                              "kubectllayer200beta2DC25BBCC",
+                              "Outputs.LayerVersionArn"
+                            ]
+                          }
+                        ],
+                        "memorySize": 256,
+                        "tags": [
+                          {
+                            "key": "ENV",
+                            "value": "STG"
+                          }
+                        ],
+                        "timeout": 900
+                      }
+                    }
+                  }
+                }
+              },
+              "Provider": {
+                "id": "Provider",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider",
+                "children": {
+                  "framework-onEvent": {
+                    "id": "framework-onEvent",
+                    "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent",
+                    "children": {
+                      "ServiceRole": {
+                        "id": "ServiceRole",
+                        "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "Service": "lambda.amazonaws.com"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "managedPolicyArns": [
+                                  {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                      ]
+                                    ]
+                                  }
+                                ],
+                                "tags": [
+                                  {
+                                    "key": "ENV",
+                                    "value": "STG"
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::GetAtt": [
+                                              "Handler886CB40B",
+                                              "Arn"
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133",
+                                    "roles": [
+                                      {
+                                        "Ref": "ProviderframeworkonEventServiceRole9FF04296"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Code": {
+                        "id": "Code",
+                        "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Code",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Code/Stage"
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Code/AssetBucket"
+                          }
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "eks/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                          "aws:cdk:cloudformation:props": {
+                            "code": {
+                              "s3Bucket": {
+                                "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref"
+                              },
+                              "s3Key": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::Select": [
+                                        0,
+                                        {
+                                          "Fn::Split": [
+                                            "||",
+                                            {
+                                              "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Select": [
+                                        1,
+                                        {
+                                          "Fn::Split": [
+                                            "||",
+                                            {
+                                              "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            },
+                            "handler": "framework.onEvent",
+                            "role": {
+                              "Fn::GetAtt": [
+                                "ProviderframeworkonEventServiceRole9FF04296",
+                                "Arn"
+                              ]
+                            },
+                            "runtime": "nodejs10.x",
+                            "environment": {
+                              "variables": {
+                                "USER_ON_EVENT_FUNCTION_ARN": {
+                                  "Fn::GetAtt": [
+                                    "Handler886CB40B",
+                                    "Arn"
+                                  ]
+                                }
+                              }
+                            },
+                            "tags": [
+                              {
+                                "key": "ENV",
+                                "value": "STG"
+                              }
+                            ],
+                            "timeout": 900
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "eksawscdkawseksKubectlProviderHandlerServiceRole8F9356D2Arn": {
+                "id": "eksawscdkawseksKubectlProviderHandlerServiceRole8F9356D2Arn",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/eksawscdkawseksKubectlProviderHandlerServiceRole8F9356D2Arn"
+              },
+              "eksawscdkawseksKubectlProviderframeworkonEvent8AB4151DArn": {
+                "id": "eksawscdkawseksKubectlProviderframeworkonEvent8AB4151DArn",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/eksawscdkawseksKubectlProviderframeworkonEvent8AB4151DArn"
+              },
+              "reference-to-eksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3Bucket65166B2F.Ref": {
+                "id": "reference-to-eksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3Bucket65166B2F.Ref",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/reference-to-eksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3Bucket65166B2F.Ref"
+              },
+              "reference-to-eksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3VersionKey5519A1A9.Ref": {
+                "id": "reference-to-eksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3VersionKey5519A1A9.Ref",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/reference-to-eksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3VersionKey5519A1A9.Ref"
+              },
+              "reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48.Ref": {
+                "id": "reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48.Ref",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48.Ref"
+              },
+              "reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696.Ref": {
+                "id": "reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696.Ref",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider/reference-to-eksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696.Ref"
+              }
+            }
+          },
+          "@aws-cdk--aws-eks.KubectlProvider.NestedStack": {
+            "id": "@aws-cdk--aws-eks.KubectlProvider.NestedStack",
+            "path": "eks/@aws-cdk--aws-eks.KubectlProvider.NestedStack",
+            "children": {
+              "@aws-cdk--aws-eks.KubectlProvider.NestedStackResource": {
+                "id": "@aws-cdk--aws-eks.KubectlProvider.NestedStackResource",
+                "path": "eks/@aws-cdk--aws-eks.KubectlProvider.NestedStack/@aws-cdk--aws-eks.KubectlProvider.NestedStackResource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFormation::Stack",
+                  "aws:cdk:cloudformation:props": {
+                    "templateUrl": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "https://s3.us-west-2.",
+                          {
+                            "Ref": "AWS::URLSuffix"
+                          },
+                          "/",
+                          {
+                            "Ref": "AssetParametersffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8dS3Bucket944B82C1"
+                          },
+                          "/",
+                          {
+                            "Fn::Select": [
+                              0,
+                              {
+                                "Fn::Split": [
+                                  "||",
+                                  {
+                                    "Ref": "AssetParametersffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8dS3VersionKey40E3A04E"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "Fn::Select": [
+                              1,
+                              {
+                                "Fn::Split": [
+                                  "||",
+                                  {
+                                    "Ref": "AssetParametersffd9db958c5165b09b0658bfde10311efffaf434f58cc61725156cde7bf1de8dS3VersionKey40E3A04E"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "parameters": {
+                      "referencetoeksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3Bucket65166B2FRef": {
+                        "Ref": "AssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3BucketC1533EC8"
+                      },
+                      "referencetoeksAssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3VersionKey5519A1A9Ref": {
+                        "Ref": "AssetParametersca6f286e0d135e22cfefc133659e2f2fe139a4b46b8eef5b8e197606625c9af9S3VersionKey2C834492"
+                      },
+                      "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref": {
+                        "Ref": "AssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketCE32EE50"
+                      },
+                      "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref": {
+                        "Ref": "AssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKeyE2AE42A5"
+                      }
+                    },
+                    "tags": [
+                      {
+                        "key": "ENV",
+                        "value": "STG"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "SsmParameterValue:--aws--service--eks--optimized-ami--1.14--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
+            "id": "SsmParameterValue:--aws--service--eks--optimized-ami--1.14--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "path": "eks/SsmParameterValue:--aws--service--eks--optimized-ami--1.14--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter"
+          },
+          "SsmParameterValue:--aws--service--eks--optimized-ami--1.14--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118": {
+            "id": "SsmParameterValue:--aws--service--eks--optimized-ami--1.14--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "path": "eks/SsmParameterValue:--aws--service--eks--optimized-ami--1.14--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118"
           }
         }
       },

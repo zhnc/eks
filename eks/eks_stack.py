@@ -14,7 +14,7 @@ class EksStack(core.Stack):
     def __init__(self, scope: core.Construct, id: str, props, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-       self.vpc = props['vpc']
+        self.vpc = props['vpc']
 
         core.Tag.add(self.vpc, "kubernetes.io/cluster/" +
                      EKS_CLUSTER_NAME, "shared")
@@ -49,21 +49,27 @@ class EksStack(core.Stack):
                 )
 
         # add instance nodes
-        asg=cluster.add_capacity("node_group",
+        cluster.add_capacity("node_group",
                 instance_type = ec2.InstanceType("m5.large"),
                 desired_capacity = 3,
                 key_name = key_name,
                 max_capacity = 4,
                 min_capacity = 1)
 
-        asg=cluster.add_capacity("node_group_spot",
-                instance_type = ec2.InstanceType("m5.large"),
-                desired_capacity = 3,
-                key_name = key_name,
-                max_capacity = 4,
-                min_capacity = 1,
-                spot_price="1.0")
+        # asg_spot=cluster.add_capacity("node_group_spot",
+        #         instance_type = ec2.InstanceType("m5.large"),
+        #         desired_capacity = 3,
+        #         key_name = key_name,
+        #         max_capacity = 4,
+        #         min_capacity = 1,
+                
+        #         spot_price="1.0")add_auto_scaling_group
 
+        cluster.add_capacity("spot",
+            spot_price="1.1094",
+            instance_type=ec2.InstanceType("t3.large"),
+            max_capacity=10
+        )
 
 
 
