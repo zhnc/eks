@@ -1,0 +1,238 @@
+{
+  "Resources": {
+    "sgjenkins47BF53FC": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "sg_jenkins",
+        "GroupName": "sg_jenkins",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "sg_jenkins",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
+          },
+          {
+            "CidrIp": "119.123.34.135/32",
+            "Description": "sg_jenkins",
+            "FromPort": 80,
+            "IpProtocol": "tcp",
+            "ToPort": 80
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ],
+        "VpcId": {
+          "Fn::ImportValue": "vpc:ExportsOutputRefVPCB9E5F0B4BD23A326"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "ec2/sg_jenkins/Resource"
+      }
+    },
+    "InstanceSSMCBFA3CF0": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonEC2RoleforSSM"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ec2/InstanceSSM/Resource"
+      }
+    },
+    "jenkinsInstanceProfileA59DE279": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "InstanceSSMCBFA3CF0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ec2/jenkins/InstanceProfile"
+      }
+    },
+    "jenkinsCE245C40": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "us-west-2a",
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+              "Encrypted": true,
+              "VolumeSize": 10
+            }
+          },
+          {
+            "DeviceName": "/dev/sdb",
+            "Ebs": {
+              "Encrypted": true,
+              "VolumeSize": 100
+            }
+          }
+        ],
+        "IamInstanceProfile": {
+          "Ref": "jenkinsInstanceProfileA59DE279"
+        },
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "m5.large",
+        "KeyName": "poc-zhnc",
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "sgjenkins47BF53FC",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Fn::ImportValue": "vpc:ExportsOutputRefVPCPublicSubnetSubnet1SubnetB36A48ACBF80D428"
+        },
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          },
+          {
+            "Key": "Name",
+            "Value": "jenkins"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash\n\nsudo yum install xfsprogs -y\nsudo mkfs -t xfs /dev/nvme1n1\nsudo mkdir /data\nsudo mount /dev/nvme1n1 /data"
+        }
+      },
+      "DependsOn": [
+        "InstanceSSMCBFA3CF0"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ec2/jenkins/Resource"
+      }
+    },
+    "eksBastionInstanceProfileE2C20FE2": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "InstanceSSMCBFA3CF0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "ec2/eks-Bastion/InstanceProfile"
+      }
+    },
+    "eksBastion2E4B6334": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "us-west-2a",
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+              "Encrypted": true,
+              "VolumeSize": 10
+            }
+          },
+          {
+            "DeviceName": "/dev/sdb",
+            "Ebs": {
+              "Encrypted": true,
+              "VolumeSize": 100
+            }
+          }
+        ],
+        "IamInstanceProfile": {
+          "Ref": "eksBastionInstanceProfileE2C20FE2"
+        },
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "m5.large",
+        "KeyName": "poc-zhnc",
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "sgjenkins47BF53FC",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Fn::ImportValue": "vpc:ExportsOutputRefVPCPublicSubnetSubnet1SubnetB36A48ACBF80D428"
+        },
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          },
+          {
+            "Key": "Name",
+            "Value": "eks-Bastion"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash\n\nsudo yum install xfsprogs -y\nsudo mkfs -t xfs /dev/nvme1n1\nsudo mkdir /data\nsudo mount /dev/nvme1n1 /data"
+        }
+      },
+      "DependsOn": [
+        "InstanceSSMCBFA3CF0"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "ec2/eks-Bastion/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-gp2"
+    }
+  }
+}

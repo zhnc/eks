@@ -1,0 +1,859 @@
+{
+  "Resources": {
+    "OnEventHandlerServiceRole15A26729": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource"
+      }
+    },
+    "OnEventHandler42BEBAE0": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21Ref"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "index.onEvent",
+        "Role": {
+          "Fn::GetAtt": [
+            "OnEventHandlerServiceRole15A26729",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x",
+        "Description": "onEvent handler for EKS cluster resource provider",
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ],
+        "Timeout": 60
+      },
+      "DependsOn": [
+        "OnEventHandlerServiceRole15A26729"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource",
+        "aws:asset:path": "asset.fcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796",
+        "aws:asset:property": "Code"
+      }
+    },
+    "IsCompleteHandlerServiceRole5810CC58": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource"
+      }
+    },
+    "IsCompleteHandler7073F4DA": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21Ref"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "index.isComplete",
+        "Role": {
+          "Fn::GetAtt": [
+            "IsCompleteHandlerServiceRole5810CC58",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x",
+        "Description": "isComplete handler for EKS cluster resource provider",
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ],
+        "Timeout": 60
+      },
+      "DependsOn": [
+        "IsCompleteHandlerServiceRole5810CC58"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource",
+        "aws:asset:path": "asset.fcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796",
+        "aws:asset:property": "Code"
+      }
+    },
+    "ProviderframeworkonEventServiceRole9FF04296": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/Resource"
+      }
+    },
+    "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "OnEventHandler42BEBAE0",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "IsCompleteHandler7073F4DA",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "states:StartExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "Providerwaiterstatemachine5D4A9DF0"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133",
+        "Roles": [
+          {
+            "Ref": "ProviderframeworkonEventServiceRole9FF04296"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "ProviderframeworkonEvent83C1D0A7": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "framework.onEvent",
+        "Role": {
+          "Fn::GetAtt": [
+            "ProviderframeworkonEventServiceRole9FF04296",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Environment": {
+          "Variables": {
+            "USER_ON_EVENT_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "OnEventHandler42BEBAE0",
+                "Arn"
+              ]
+            },
+            "USER_IS_COMPLETE_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "IsCompleteHandler7073F4DA",
+                "Arn"
+              ]
+            },
+            "WAITER_STATE_MACHINE_ARN": {
+              "Ref": "Providerwaiterstatemachine5D4A9DF0"
+            }
+          }
+        },
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ],
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133",
+        "ProviderframeworkonEventServiceRole9FF04296"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource",
+        "aws:asset:path": "asset.505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d",
+        "aws:asset:property": "Code"
+      }
+    },
+    "ProviderframeworkisCompleteServiceRoleB1087139": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/Resource"
+      }
+    },
+    "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "OnEventHandler42BEBAE0",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "IsCompleteHandler7073F4DA",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC",
+        "Roles": [
+          {
+            "Ref": "ProviderframeworkisCompleteServiceRoleB1087139"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "ProviderframeworkisComplete26D7B0CB": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "framework.isComplete",
+        "Role": {
+          "Fn::GetAtt": [
+            "ProviderframeworkisCompleteServiceRoleB1087139",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Environment": {
+          "Variables": {
+            "USER_ON_EVENT_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "OnEventHandler42BEBAE0",
+                "Arn"
+              ]
+            },
+            "USER_IS_COMPLETE_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "IsCompleteHandler7073F4DA",
+                "Arn"
+              ]
+            }
+          }
+        },
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ],
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC",
+        "ProviderframeworkisCompleteServiceRoleB1087139"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource",
+        "aws:asset:path": "asset.505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d",
+        "aws:asset:property": "Code"
+      }
+    },
+    "ProviderframeworkonTimeoutServiceRole28643D26": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/Resource"
+      }
+    },
+    "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "OnEventHandler42BEBAE0",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "IsCompleteHandler7073F4DA",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F",
+        "Roles": [
+          {
+            "Ref": "ProviderframeworkonTimeoutServiceRole28643D26"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "ProviderframeworkonTimeout0B47CA38": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "framework.onTimeout",
+        "Role": {
+          "Fn::GetAtt": [
+            "ProviderframeworkonTimeoutServiceRole28643D26",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Environment": {
+          "Variables": {
+            "USER_ON_EVENT_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "OnEventHandler42BEBAE0",
+                "Arn"
+              ]
+            },
+            "USER_IS_COMPLETE_FUNCTION_ARN": {
+              "Fn::GetAtt": [
+                "IsCompleteHandler7073F4DA",
+                "Arn"
+              ]
+            }
+          }
+        },
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ],
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F",
+        "ProviderframeworkonTimeoutServiceRole28643D26"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource",
+        "aws:asset:path": "asset.505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7d",
+        "aws:asset:property": "Code"
+      }
+    },
+    "ProviderwaiterstatemachineRole0C7159F9": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "states.us-west-2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "ENV",
+            "Value": "STG"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/Resource"
+      }
+    },
+    "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "ProviderframeworkisComplete26D7B0CB",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "ProviderframeworkonTimeout0B47CA38",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A",
+        "Roles": [
+          {
+            "Ref": "ProviderwaiterstatemachineRole0C7159F9"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy/Resource"
+      }
+    },
+    "Providerwaiterstatemachine5D4A9DF0": {
+      "Type": "AWS::StepFunctions::StateMachine",
+      "Properties": {
+        "DefinitionString": {
+          "Fn::Join": [
+            "",
+            [
+              "{\"StartAt\":\"framework-isComplete-task\",\"States\":{\"framework-isComplete-task\":{\"End\":true,\"Retry\":[{\"ErrorEquals\":[\"States.ALL\"],\"IntervalSeconds\":60,\"MaxAttempts\":60,\"BackoffRate\":1}],\"Catch\":[{\"ErrorEquals\":[\"States.ALL\"],\"Next\":\"framework-onTimeout-task\"}],\"Type\":\"Task\",\"Resource\":\"",
+              {
+                "Fn::GetAtt": [
+                  "ProviderframeworkisComplete26D7B0CB",
+                  "Arn"
+                ]
+              },
+              "\"},\"framework-onTimeout-task\":{\"End\":true,\"Type\":\"Task\",\"Resource\":\"",
+              {
+                "Fn::GetAtt": [
+                  "ProviderframeworkonTimeout0B47CA38",
+                  "Arn"
+                ]
+              },
+              "\"}}}"
+            ]
+          ]
+        },
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "ProviderwaiterstatemachineRole0C7159F9",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A",
+        "ProviderwaiterstatemachineRole0C7159F9"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "eks/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource"
+      }
+    }
+  },
+  "Outputs": {
+    "eksawscdkawseksClusterResourceProviderOnEventHandlerServiceRole706690C6Arn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "OnEventHandlerServiceRole15A26729",
+          "Arn"
+        ]
+      }
+    },
+    "eksawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRoleEBFBAF88Arn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "IsCompleteHandlerServiceRole5810CC58",
+          "Arn"
+        ]
+      }
+    },
+    "eksawscdkawseksClusterResourceProviderframeworkonEvent4680128CArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ProviderframeworkonEvent83C1D0A7",
+          "Arn"
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3Bucket14A02D21Ref": {
+      "Type": "String"
+    },
+    "referencetoeksAssetParametersfcbdc6836e088c135f093165f26ac77f803a8c9d544b5fbb39e19f8e0d731796S3VersionKey5B6A605CRef": {
+      "Type": "String"
+    },
+    "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3BucketC3E01B48Ref": {
+      "Type": "String"
+    },
+    "referencetoeksAssetParameters505ce3cd0281ce7a2065203c140457d84a514d5426cfa36d6e576dcefa257c7dS3VersionKey8CBDB696Ref": {
+      "Type": "String"
+    }
+  }
+}
