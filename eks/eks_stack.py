@@ -13,7 +13,7 @@ class EksStack(core.Stack):
     def __init__(self, scope: core.Construct, id: str, props, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        key_name = proos['key_name']
+        key_name = props['key_name']
         self.vpc = props['vpc']
 
         core.Tag.add(self.vpc, "kubernetes.io/cluster/" +
