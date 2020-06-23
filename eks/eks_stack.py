@@ -6,7 +6,6 @@ from aws_cdk import (
 )
 
 EKS_CLUSTER_NAME = "eks_demo"
-key_name = "poc-zhnc"
 
 
 class EksStack(core.Stack):
@@ -14,6 +13,7 @@ class EksStack(core.Stack):
     def __init__(self, scope: core.Construct, id: str, props, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
+        key_name = proos['key_name']
         self.vpc = props['vpc']
 
         core.Tag.add(self.vpc, "kubernetes.io/cluster/" +

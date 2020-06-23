@@ -8,14 +8,13 @@ from aws_cdk import (
 with open("./user_data/attach_ebs.sh") as f:
     user_data = f.read()
 
-key_name = "poc-zhnc"
-
 
 class Ec2Stack(core.Stack):
 
-    def __init__(self, scope: core.Construct, id: str, jenkins_ami: str,props, **kwargs) -> None:
+    def __init__(self, scope: core.Construct, id: str, jenkins_ami: str, props, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
+        key_name = proos['key_name']
         self.vpc = props['vpc']
         # sg-jenkins
         sgjenkins = ec2.SecurityGroup(self, "sg_jenkins", vpc=self.vpc, allow_all_outbound=True,
