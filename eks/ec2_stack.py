@@ -14,7 +14,7 @@ class Ec2Stack(core.Stack):
     def __init__(self, scope: core.Construct, id: str, jenkins_ami: str, props, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        key_name = proos['key_name']
+        key_name = props['key_name']
         self.vpc = props['vpc']
         # sg-jenkins
         sgjenkins = ec2.SecurityGroup(self, "sg_jenkins", vpc=self.vpc, allow_all_outbound=True,
